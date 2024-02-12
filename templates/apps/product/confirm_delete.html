@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="center">
+    <form method="post" class="card">
+        {% csrf_token %}
+        <h2>Delete Product</h2>
+        <p>Are you sure that you want to delete "{{ product }}"?</p>
+        <p class="form-buttons">
+            <input type="submit" class="btn btn-primary" value="Delete">
+            <a href="{% url 'product_list_page' %}" class="btn btn-outline">Cancel</a>
+        </p>
+    </form>
+</div>
+
+</body>
+</html>
