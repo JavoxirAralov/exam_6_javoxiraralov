@@ -10,8 +10,11 @@ from apps.mixins import NotLoginRequiredMixin
 from apps.models import Product
 
 
-class IndexView(TemplateView):
+class HomeView(TemplateView):
     template_name = 'apps/home.html'
+
+class IndexView(TemplateView):
+    template_name = 'index.html'
 
 
 class RegisterFormView(FormView):

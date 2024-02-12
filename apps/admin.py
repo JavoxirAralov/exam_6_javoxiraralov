@@ -10,6 +10,7 @@ from django.shortcuts import redirect, render
 from django.urls import path
 from apps.models import User, Product
 
+
 @admin.register(User)
 class CustomUserAdmin(UserAdmin):
     list_display = ['username', 'email', 'first_name', 'last_name', 'is_staff', 'user_image']
@@ -97,4 +98,4 @@ class ProductAdmin(admin.ModelAdmin, ExportCsvMixin):
             return redirect("..")
         form = CsvImportForm()
         payload = {"form": form}
-        return render(request, "templates/apps/csv_form.html", payload)
+        return render(request, "apps/csv_form.html", payload)
