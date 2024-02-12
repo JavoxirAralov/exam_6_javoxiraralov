@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block container %}
+    <div>
+        <p>{{ title.name }}</p>
+        <form action="#" method="POST">
+            {% csrf_token %}
+            <div class="col-md-12 col-12 mb-20">
+                <label>Product Title -> </label>
+                <input class="mb-0" name="title" type="text" placeholder="Title">
+            </div>
+            <div class="col-12 mb-20">
+                <label>Product content -> </label>
+                <input class="mb-0" name="content" type="text" placeholder="Content">
+            </div>
+            <div class="col-12 mb-20">
+                <br>
+                <button type="submit" class="btn btn-success" style="margin-left: 100px">Submit</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}
